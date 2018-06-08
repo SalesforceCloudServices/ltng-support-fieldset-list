@@ -1,0 +1,10 @@
+<!--
+/**
+ * An action surrounding the FieldSet Container (often for saves, but can be repurposed for multiple uses).<
+ * @event: ltng_FieldSetContainerAction
+ **/
+-->
+<aura:event type="COMPONENT" description="An action surrounding the FieldSet Container">
+    <aura:attribute name="actionType" type="String" />
+    <aura:attribute name="success" type="Boolean" />
+</aura:event>

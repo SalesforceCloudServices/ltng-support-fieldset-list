@@ -1,0 +1,7 @@
+SELECT Name, BillingCity__c, BillingPostalCode__c, BillingState__c, 
+	BillingStreet__c, Description__c, ExampleCheckbox__c, ExampleDate__c, 
+	ExampleLongText__c, ExampleNumber__c, ExamplePicklist__c, 
+	ExampleRichText__c, ExampleTextArea__c, ExampleText__c, Firstname__c, 
+	LastName__c, ShippingCity__c, ShippingPostalCode__c, ShippingState__c, 
+	ShippingStreet__c, SubType__c, Type__c, RequiredFieldByLayout__c, RequiredFieldByObject__c
+FROM ltng_FieldSetListDemoBase__c

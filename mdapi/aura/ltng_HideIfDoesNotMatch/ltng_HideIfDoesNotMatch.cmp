@@ -1,0 +1,30 @@
+<!--
+/**
+ * Component that hides the contents if a string does not contain another string
+ * @component: ltng_HideIfDoesNotMatch
+ * @example:
+    <c:ltng_HideIfDoesNotMatch searchInside="" valueToFind="">
+        If value isFound
+    </c:ltng_HideIfDoesNotMatch>
+ **/
+-->
+<aura:component
+    implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes"
+    access="global"
+>
+    <!-- attributes -->
+    <aura:attribute name="valueToFind" type="String" />
+    <aura:attribute name="searchInside" type="String" />
+    <!-- private attributes -->
+    <aura:attribute name="foundValue" type="Boolean" access="private" />
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler name="change" value="{!v.searchInside}" action="{!c.handleNeedleHaystackChanged}" />
+    <aura:handler name="change" value="{!v.valueToFind}" action="{!c.handleNeedleHaystackChanged}" />
+    <!-- events -->
+    <!-- elements -->
+    <div class="{! if(v.foundValue, '','slds-hide') }">
+        {!v.body}
+    </div>
+</aura:component>
+

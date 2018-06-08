@@ -1,0 +1,7 @@
+.THIS .hidden {
+    visibility:hidden;
+}
+
+.THIS lightning-input.no-label label {
+    display: none;
+}

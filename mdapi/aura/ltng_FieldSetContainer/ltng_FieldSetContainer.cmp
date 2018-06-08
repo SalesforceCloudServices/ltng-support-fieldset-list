@@ -1,0 +1,85 @@
+<!--
+/**
+ * Container for displaying a set of FieldSets
+ * @component: ltng_FieldSetContainer
+**/
+-->
+<aura:component
+    controller="ltng_FieldSetContainerCtrl"
+    implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes"
+    access="global"
+>
+    <!-- attributes -->
+    <aura:attribute name="fieldSetApiNames" type="String" />
+    <aura:attribute name="useTwoColumns" type="Boolean" default="true" />
+    <!-- private attributes -->
+    <!-- split list of 'fieldSetName's by commas -->
+    <aura:attribute name="fieldSetList" type="String[]" access="private"/>
+    <!-- results from the query with info for all FieldSets and fields in those field sets -->
+    <aura:attribute name="formInfo" type="Object" access="private" />
+    <!-- whether the record is read-only for this user -->
+    <aura:attribute name="isReadOnly" type="Boolean" default="true" access="private" />
+    <!-- whether we are working in edit mode (true) or read only mode (false) -->
+    <aura:attribute name="inEditMode" type="Boolean" default="false" access="private" />
+    <!-- label for the button to move from edit to read only mode -->
+    <aura:attribute name="editToggleLabel" type="String" default='Edit' access="private" />
+    <!-- components we are waiting to hear back from -->
+    <aura:attribute name="saveCountdown" type="Integer" default="0" access="private" />
+    <aura:attribute name="wasSaveSuccessful" type="Boolean" default="false" access="private" />
+
+    <!-- @TODO: move to the design -->
+    <aura:attribute name="gridStyles" type="String" access="private" />
+    <aura:attribute name="columnStyles" type="String" access="private" />
+    <aura:attribute name="formStyles" type="String" access="private" />
+
+    <aura:attribute name="showFieldSearch" type="Boolean" default="true" />
+    <aura:attribute name="fieldSearchStr" type="String" access="private" />
+
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <!-- handles when the fieldSetContainer is about to save or has finished saving -->
+    <aura:handler name="ltng_FieldSetContainerAction" event="c:ltng_FieldSetContainerAction"
+        action="{!c.handleFieldSetContainerAction}" phase="capture" includeFacets="true"
+    />
+    <!-- events -->
+    <!-- elements -->
+    <div class='slds-box slds-theme_default'>
+        <div class='{!v.gridStyles}'>
+            <aura:if isTrue="{!v.showFieldSearch}">
+                <div class='slds-col slds-size_1-of-1 slds-align_absolute-center'>
+                    <div class="slds-form-element slds-lookup slds-m-bottm_medium" data-select="single">
+                        <div class="slds-form-element__control">
+                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                <lightning:buttonIcon iconName="utility:search" variant="bare" alternativeText="Search" class="slds-input__icon" />
+                                <lightning:input class='no-label' name="fieldSearch" Placeholder="Search for a field..."
+                                    onchange="{!c.handleFieldSearchChanged}" value="{!v.fieldSearchStr}"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:iteration items="{!v.formInfo.FieldSets}" var="fieldSetInfo">
+                <div class='{!v.columnStyles}'>
+                    <div class='slds-text-body_regular slds-p-top_medium'>{!fieldSetInfo.Label}</div>
+                    <c:ltng_FieldSetContainerList aura:id="fieldSetContainerList"
+                        fieldSearchStr="{!v.fieldSearchStr}"
+                        fieldSetInfo="{!fieldSetInfo}" formStyles="{!v.formStyles}"
+                        sObjectName="{!v.sObjectName}" recordId="{!v.recordId}"
+                        recordTypeId="{!v.recordTypeId}" inEditMode="{!v.inEditMode}"
+                    />
+                </div>
+            </aura:iteration>
+            <aura:if isTrue="{!not(v.isReadOnly)}">
+                <div class='slds-col slds-size_1-of-1 slds-align_absolute-center'>
+                    <div class='slds-m-top_medium'>
+                        <lightning:button variant="brand" label="{!v.editToggleLabel}" onclick="{! c.handleEditToggleClicked }" />
+                        <aura:if isTrue="{!v.inEditMode}">
+                            <lightning:button variant="brand" label="Save" onclick="{! c.handleSaveClicked }" />
+                        </aura:if>
+                    </div>
+                </div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

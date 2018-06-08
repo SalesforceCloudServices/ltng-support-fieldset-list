@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Type --></label>
+    <name>SubType__c</name>
+    <picklistValues>
+        <masterLabel>Type A - Master</masterLabel>
+        <translation><!-- Type A - Master --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type A - Variant</masterLabel>
+        <translation><!-- Type A - Variant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type B - Master</masterLabel>
+        <translation><!-- Type B - Master --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type B - Variant</masterLabel>
+        <translation><!-- Type B - Variant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type C - Master</masterLabel>
+        <translation><!-- Type C - Master --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type C - Variant</masterLabel>
+        <translation><!-- Type C - Variant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type D - Master</masterLabel>
+        <translation><!-- Type D - Master --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type D - Variant</masterLabel>
+        <translation><!-- Type D - Variant --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

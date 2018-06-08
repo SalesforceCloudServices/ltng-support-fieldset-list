@@ -1,0 +1,11 @@
+<design:component>
+        <design:attribute name="fieldSetApiNames" label="List of FieldSet API Names"
+            description="Comma Separated list of fieldsets (by API Name) to use"
+        />
+        <design:attribute name="useTwoColumns" label="Use Two Columns"
+            description="Whether to use two columns (checked) or one column (unchecked)"
+        />
+        <design:attribute name="showFieldSearch" label="Show Field Search?"
+            description="Whether to show the FieldSearch input"
+        />
+</design:component>

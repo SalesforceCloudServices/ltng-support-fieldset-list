@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FieldSet List Demo Base</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FieldSet List Demo Bases</value>
+    </caseValues>
+    <layouts>
+        <layout>FieldSet Demo Base Layout</layout>
+        <sections>
+            <label><!-- Billing Detail --></label>
+            <section>Billing Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Contact --></label>
+            <section>Contact</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping Detail --></label>
+            <section>Shipping Detail</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <fields>
+        <label><!-- Billing City --></label>
+        <name>BillingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Postal Code --></label>
+        <name>BillingPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing State --></label>
+        <name>BillingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Street --></label>
+        <name>BillingStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>Firstname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping City --></label>
+        <name>ShippingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Postal Code --></label>
+        <name>ShippingPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping State --></label>
+        <name>ShippingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Street --></label>
+        <name>ShippingStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Type --></label>
+        <name>SubType__c</name>
+        <picklistValues>
+            <masterLabel>Type A - Master</masterLabel>
+            <translation><!-- Type A - Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type A - Variant</masterLabel>
+            <translation><!-- Type A - Variant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type B - Master</masterLabel>
+            <translation><!-- Type B - Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type B - Variant</masterLabel>
+            <translation><!-- Type B - Variant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type C - Master</masterLabel>
+            <translation><!-- Type C - Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type C - Variant</masterLabel>
+            <translation><!-- Type C - Variant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type D - Master</masterLabel>
+            <translation><!-- Type D - Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type D - Variant</masterLabel>
+            <translation><!-- Type D - Variant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Type A</masterLabel>
+            <translation><!-- Type A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type B</masterLabel>
+            <translation><!-- Type B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type C</masterLabel>
+            <translation><!-- Type C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type D</masterLabel>
+            <translation><!-- Type D --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

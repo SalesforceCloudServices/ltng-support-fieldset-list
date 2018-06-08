@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubType__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Type A - Master</fullName>
+                <default>false</default>
+                <label>Type A - Master</label>
+            </value>
+            <value>
+                <fullName>Type A - Variant</fullName>
+                <default>false</default>
+                <label>Type A - Variant</label>
+            </value>
+            <value>
+                <fullName>Type B - Master</fullName>
+                <default>false</default>
+                <label>Type B - Master</label>
+            </value>
+            <value>
+                <fullName>Type B - Variant</fullName>
+                <default>false</default>
+                <label>Type B - Variant</label>
+            </value>
+            <value>
+                <fullName>Type C - Master</fullName>
+                <default>false</default>
+                <label>Type C - Master</label>
+            </value>
+            <value>
+                <fullName>Type C - Variant</fullName>
+                <default>false</default>
+                <label>Type C - Variant</label>
+            </value>
+            <value>
+                <fullName>Type D - Master</fullName>
+                <default>false</default>
+                <label>Type D - Master</label>
+            </value>
+            <value>
+                <fullName>Type D - Variant</fullName>
+                <default>false</default>
+                <label>Type D - Variant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

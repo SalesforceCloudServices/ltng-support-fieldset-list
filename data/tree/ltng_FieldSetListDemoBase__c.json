@@ -1,0 +1,34 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "ltng_FieldSetListDemoBase__c",
+                "referenceId": "ltng_FieldSetListDemoBase__cRef1"
+            },
+            "Name": "Example Record",
+            "BillingCity__c": "Oak Park",
+            "BillingPostalCode__c": "60302",
+            "BillingState__c": "IL",
+            "BillingStreet__c": "951 Chicago Ave",
+            "Description__c": "<p>Base Example for FieldSets within Lightning Experience.</p>",
+            "ExampleCheckbox__c": true,
+            "ExampleDate__c": "2018-06-07",
+            "ExampleLongText__c": "I know the kings of England, and I quote the fights historical\r\nFrom Marathon to Waterloo, in order categorical;\r\nI'm very well acquainted, too, with matters mathematical,\r\nI understand equations, both the simple and quadratical,\r\nAbout binomial theorem I'm teeming with a lot o' news,\r\nWith many cheerful facts about the square of the hypotenuse.",
+            "ExampleNumber__c": 41,
+            "ExamplePicklist__c": "PR",
+            "ExampleRichText__c": "<p>With many cheerful facts about the square of the <b>hypotenuse</b></p><p><b>WITH MANY CHEERFUL FACTS ABOUT THE SQUARE OF THE HYPOTENUSE.</b></p><p>Just how the devil do you correctly spell HY-PO-TEN-USE?</p><p>I do not know, I cannot know, and will not consider it any further.</p>",
+            "ExampleTextArea__c": "I am the very model of a modern major general\r\nI've information vegetable, animal and mineral",
+            "ExampleText__c": "Example Text",
+            "Firstname__c": "Johnny",
+            "LastName__c": "Doe",
+            "ShippingCity__c": "Chicago",
+            "ShippingPostalCode__c": "60637",
+            "ShippingState__c": "IL",
+            "ShippingStreet__c": "5757 S Woodlawn Ave",
+            "SubType__c": "Type A - Variant",
+            "RequiredFieldByLayout__c": "Absolutely!",
+            "RequiredFieldByObject__c": "Well, of course!",
+            "Type__c": "Type A"
+        }
+    ]
+}
