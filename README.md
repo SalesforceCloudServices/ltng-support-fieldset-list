@@ -64,14 +64,14 @@ Currently, editing FieldSets are not supported within Lightning Experience.
 
 We've included an additional component called the [FieldSetHelper](dx/force-app/main/default/aura/ltng_FieldSetHelper)
 
-![Screenshot of FieldSetHelper](docs/images/FieldSetHelperScreenshot.png)
-
 You can just drag the component onto an App Builder Record Page, and only Administrators that can manage FieldSets will see the panel.
 
-![Screenshot of App Builder](docs/images/FieldSetHelperScreenshotInBuilder.png)
+
 
 Clicking the link will take your users directly to the Lightning Setup page for that object, or to the FieldSet definition for the object.
 (So users won't lose their spot as they switch to Classic for just that one feature)
+
+![Screenshot of FieldSetHelper](docs/images/FieldSetHelperScreenshot2.png)
 
 
 # TLDR How
