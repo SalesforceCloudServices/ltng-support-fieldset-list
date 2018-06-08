@@ -4,21 +4,6 @@ How can we use FieldSets within Lightning Experience?
 
 **Please note: sample code (metadata api and dx formats) are available in the [mdapi](./mdapi) and [dx](./dx) folders above. Please see the [Install](#install) section for more detail.**
 
-# FieldSet Helper
-
-Currently, FieldSets are not supported within Lightning Experience.
-
-We've included an additional component called the [FieldSetHelper](dx/force-app/main/default/aura/ltng_FieldSetHelper)
-
-![Screenshot of FieldSetHelper](docs/images/FieldSetHelperScreenshot.png)
-
-You can just drag the component onto an App Builder Record Page, and only Administrators that can manage FieldSets will see the panel.
-
-![Screenshot of App Builder](docs/images/FieldSetHelperScreenshotInBuilder.png)
-
-Clicking the link will take your users directly to the Lightning Setup page for that object, or to the FieldSet definition for the object.
-(So users won't lose their spot as they switch to Classic for just that one feature)
-
 # Advanced FieldSet Container
 
 Sometimes we want to reduce the amount of space that our record edit pages take up <br /> (leveraging the [Lightning Design System Horizontal Layout](https://www.lightningdesignsystem.com/components/form-element/#Horizontal) )
@@ -32,6 +17,14 @@ All in a way that is configurable through the App Builder
 But Editable, in a way that is simpler for our user to find and edit what they need - through a Field Search.
 
 ![Screenshot of Edit with Search](docs/images/FieldSetDemo_EditSearch.gif)
+
+# FieldSets
+
+Within this demo, we be leveraging [FieldSets](https://help.salesforce.com/articleView?id=fields_about_field_sets.htm&type=5) - a configurable way within Salesforce to collect Fields into a collection.
+
+These can be laid in a particular order (or even marked as required for this FieldSet - similar to Page Layouts)
+
+![Screenshot of assigning fields to FieldSet](docs/images/newFieldSet2.png)
 
 # How to Use
 
@@ -56,10 +49,6 @@ The Search will search fields ignoring case.
 
 -----
 
-
-
------
-
 If you do not have an App Builder Record Layout, one can be created very simply: (although please note there are other options)
 
 ![Screenshot of Setup Search for App Builder](docs/images/NewAppBuilderPage.png)
@@ -68,8 +57,21 @@ If you do not have an App Builder Record Layout, one can be created very simply:
 
 ![Screenshot of the Record Default Layout](docs/images/newAppBuilderPage3.png)
 
------
 
+# FieldSet Helper
+
+Currently, editing FieldSets are not supported within Lightning Experience.
+
+We've included an additional component called the [FieldSetHelper](dx/force-app/main/default/aura/ltng_FieldSetHelper)
+
+![Screenshot of FieldSetHelper](docs/images/FieldSetHelperScreenshot.png)
+
+You can just drag the component onto an App Builder Record Page, and only Administrators that can manage FieldSets will see the panel.
+
+![Screenshot of App Builder](docs/images/FieldSetHelperScreenshotInBuilder.png)
+
+Clicking the link will take your users directly to the Lightning Setup page for that object, or to the FieldSet definition for the object.
+(So users won't lose their spot as they switch to Classic for just that one feature)
 
 
 # TLDR How
@@ -100,12 +102,10 @@ Please login to an available sandbox and click the link below.
 -- ex: /installPackage.apexp?p0=04t6A000002sreiQAA
 -- be sure that there are no spaces (it happens...)
 
-[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssicQAA](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssicQAA)
+[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ)
 
-(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000002ssicQAA` <br />
+(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ` <br />
 if you are already logged in)
-
-@CHANGE: update image to the install package
 
 ![Install for Admins](docs/images/installPackage.png)
 
@@ -115,13 +115,9 @@ It is recommended to install for Admins Only (but all options will work)
 
 Next, click on the 'dice' and open the 'URL Hack Demo' app.
 
-@CHANGE: update image to your app in the launcher
-
 ![URL Hack Demo App](docs/images/appInLauncher.png)
 
 and run `Setup` from the `Demo Setup` tab.
-
-@CHANGE: update the image to your setup page
 
 ![URL Hack Demo Setup](docs/images/demoSetup1.png)
 
@@ -130,9 +126,6 @@ This will then perform any additional setup (such as creating records, etc).
 ##### Run the Demos
 
 Thats it. See the [How to Use](#how-to-use) section for how to use the app.
-
-@CHANGE: Remove the `Known Issue` section if record types are not needed,
--- otherwise, make the following changes in this section
 
 #### -- Known Issue -- Add the missing permissions on the permission set
 
@@ -147,10 +140,6 @@ We are working with different teams, but it appears as though the installation w
 
 **1.** Navigate to the `Demo Setup` page
 
-@CHANGE: update screenshot to exact image within the Setup
-@CHANGE: update the DemoSetup Component to the exact names of the record types needed.
-@CHANGE: update to the exact names of the record types to add
-
 ![Dependent Picklist Demo page](docs/images/correctPermissionSet.png)
 
 and click on the link **Add the 'Standard' record types to the permission set'**
@@ -159,13 +148,11 @@ This will navigate you to the permission set in your org.
 
 **3.** Click edit and enable the record types for that permission set.
 
-@CHANGE: update screenshot to exactly the the RecordTypes needed.
-
 ![Add record types to permission set](docs/images/correctPermissionSet2.png)
 
 ## Installing via the Salesforce CLI
 
-This assumes you have already installed the [Salesforce CLI]() and [Connected the Salesforce CLI to your org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm).
+This assumes you have already installed the [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli) and [Connected the Salesforce CLI to your org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm).
 
 However, the Salesforce CLI can be used with any org and does not require Salesforce DX to be enabled. (Although enabling the DX / Dev Hub would give some great benefits, and would only require care of [certain object permissions: Scratch Org Info, ActiveScratchOrg, NamespaceRegistry](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_add_users.htm) - as they are not available in all orgs)
 

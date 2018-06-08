@@ -29,8 +29,8 @@
   <types>
     <name>FlexiPage</name>
     <members>FieldSetListDemo_App_UtilityBar</members>
-    <members>FieldSet_List_Record_View</members>
     <members>ltng_FieldSetListDemoSetup</members>
+    <members>ltng_FieldSetListRecordView</members>
   </types>
   <types>
     <name>GlobalValueSet</name>
