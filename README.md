@@ -32,7 +32,7 @@ Just to mention, in the [list of Lightning Expressions](https://developer.salesf
 
 How?
 
-We can make it ourselves through a new component - like the [HideIfDoesNotMatch](dx/force/app/main/default/ltng_HideIfDoesNotMatch) component.
+We can make it ourselves through a new component - like the [HideIfDoesNotMatch](dx/force-app/main/default/aura/ltng_HideIfDoesNotMatch) component.
 
 For example:
 
