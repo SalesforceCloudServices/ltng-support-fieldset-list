@@ -26,6 +26,28 @@ These can be laid in a particular order (or even marked as required for this Fie
 
 ![Screenshot of assigning fields to FieldSet](docs/images/newFieldSet2.png)
 
+# Example of the Power of Lightning
+
+Just to mention, in the [list of Lightning Expressions](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/expr_functions.htm) - there is no expression for `find` or `contains`, yet we are able to hide/show fields if their case-insensitve name includes the search.
+
+How?
+
+We can make it ourselves through a new component - like the [HideIfDoesNotMatch](dx/force/app/main/default/ltng_HideIfDoesNotMatch) component.
+
+For example:
+
+	<c:ltng_HideIfDoesNotMatch searchInside="{!field.Label}" valueToFind="{!v.fieldSearchStr}">
+		...
+	</c:ltng_HideIfDoesNotMatch>
+
+So instead of writing a new expression, we can wrap it with our custom component instead.
+
+If it only needs to evaluate once (such as on-load), this is much easier to handle: (through `init` and [#Unbound Expressions](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/expr_data_binding.htm))
+
+Otherwise, like in this case, we can leverage [!Bound Expressions](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/expr_data_binding.htm) and [changeHandlers](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/js_cb_data_change.htm) to evaluate as it changes.
+
+And now we hide or show things whenever we want, in any lightning component we want, thanks to the power of components.
+
 # How to Use
 
 To use the component, we need to create FieldSets for us to include:
