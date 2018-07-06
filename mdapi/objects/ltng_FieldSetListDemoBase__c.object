@@ -39,7 +39,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>FieldSet_List_Record_View</content>
+        <content>ltng_FieldSetListRecordView</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -134,7 +134,7 @@
     <fields>
         <fullName>ExampleFormula__c</fullName>
         <externalId>false</externalId>
-        <formula>"Hello User: " + $User.FirstName</formula>
+        <formula>&quot;Hello User: &quot; + $User.FirstName</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Example Formula</label>
         <required>false</required>

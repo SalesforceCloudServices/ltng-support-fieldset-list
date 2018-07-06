@@ -18,6 +18,20 @@ But Editable, in a way that is simpler for our user to find and edit what they n
 
 ![Screenshot of Edit with Search](docs/images/FieldSetDemo_EditSearch.gif)
 
+# Related Record Component
+
+There are also declarative (clicks-not-code) options aswell - such as using [Related Record components](https://releasenotes.docs.salesforce.com/en-us/spring17/release-notes/rn_forcecom_lab_comp_related_record.htm)
+
+![Screenshot of RelatedRecord Components](docs/images/RelatedRecordOverview1.png)
+
+We can do this by placing standard Related Record lightning components in our App Builder page. (Within Tabs, Accordions, or other containers)
+
+![Screenshot of App Builder page with Related Record components](docs/images/RelatedRecordOverview2.png)
+
+Here, they show the fields from a Quick Action - specified on the App Builder page. (Such as their order, whether required or read-only)
+
+![Screenshot of Quick Action used for Related Record](docs/images/RelatedRecordQuickAction.png)
+
 # FieldSets
 
 Within this demo, we be leveraging [FieldSets](https://help.salesforce.com/articleView?id=fields_about_field_sets.htm&type=5) - a configurable way within Salesforce to collect Fields into a collection.
@@ -124,9 +138,9 @@ Please login to an available sandbox and click the link below.
 -- ex: /installPackage.apexp?p0=04t6A000002sreiQAA
 -- be sure that there are no spaces (it happens...)
 
-[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ)
+[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002stw5QAA](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002stw5QAA)
 
-(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000002ssnJQAQ` <br />
+(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000002stw5QAA` <br />
 if you are already logged in)
 
 ![Install for Admins](docs/images/installPackage.png)

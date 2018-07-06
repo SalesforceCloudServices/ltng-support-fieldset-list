@@ -24,7 +24,7 @@
   </types>
   <types>
     <name>ContentAsset</name>
-    <members>lightningLogo</members>
+    <members>fieldSetDemoLogo</members>
   </types>
   <types>
     <name>FlexiPage</name>
@@ -94,6 +94,13 @@
   <types>
     <name>PermissionSet</name>
     <members>FieldSetListDemoParticipant</members>
+  </types>
+  <types>
+    <name>QuickAction</name>
+    <members>ltng_FieldSetListDemoBase__c.BUTP_Billing_Detail</members>
+    <members>ltng_FieldSetListDemoBase__c.BUTP_Contact_Info</members>
+    <members>ltng_FieldSetListDemoBase__c.BUTP_Shipping_Detail</members>
+    <members>ltng_FieldSetListDemoBase__c.BUTP_Standard_Detail</members>
   </types>
   <types>
     <name>CustomTab</name>

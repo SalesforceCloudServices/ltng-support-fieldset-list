@@ -20,7 +20,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>richTextValue</name>
-                <value>&lt;b&gt;&lt;span style="font-size:20px;"&gt;Enhanced FieldSet Component&lt;/span&gt;&lt;/b&gt;&lt;br /&gt;
+                <value>&lt;b&gt;&lt;span style=&quot;font-size:20px;&quot;&gt;Enhanced FieldSet Component&lt;/span&gt;&lt;/b&gt;&lt;br /&gt;
 &lt;br /&gt;
 (ltng_FieldSetContainer&amp;nbsp; - containing others like ltng_FieldSetContainerList)&lt;br /&gt;
 &lt;br /&gt;
@@ -63,6 +63,93 @@ This supports lists of FieldSets (instead of just one at a time - like from the 
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentName>force:detailPanel</componentName>
+        </componentInstances>
+        <name>Facet-0b4d61e5-0644-4628-a4d5-626adfb38535</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;b&gt;Break-up-the-Page with Related Records&lt;/b&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size: 12px;&quot;&gt;Instead of showing all fields from the Page Layout, now we can show certain fields - as set from Quick Actions - and shown here through Related Record Lightning Components.&lt;/span&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>lookupFieldName</name>
+                <value>Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>titleFieldName</name>
+                <value>Standard Detail</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>ltng_FieldSetListDemoBase__c.BUTP_Standard_Detail</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>lookupFieldName</name>
+                <value>Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>titleFieldName</name>
+                <value>Contact Info</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>ltng_FieldSetListDemoBase__c.BUTP_Contact_Info</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
+        </componentInstances>
+        <name>Facet-56cb348f-f03c-478e-b53a-fb122dcb7a4e</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>lookupFieldName</name>
+                <value>Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>titleFieldName</name>
+                <value>Billing Detail</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>ltng_FieldSetListDemoBase__c.BUTP_Billing_Detail</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>lookupFieldName</name>
+                <value>Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>titleFieldName</name>
+                <value>Shipping Detail</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>updateQuickActionName</name>
+                <value>ltng_FieldSetListDemoBase__c.BUTP_Shipping_Detail</value>
+            </componentInstanceProperties>
+            <componentName>console:relatedRecord</componentName>
+        </componentInstances>
+        <name>Facet-a01d9338-d09a-4883-8206-0572335af3fc</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
             <componentInstanceProperties>
                 <name>decorate</name>
                 <value>true</value>
@@ -98,21 +185,7 @@ This is a simple component that simply lists those fields out - but helps to cla
             </componentInstanceProperties>
             <componentName>ltng_FieldSetForm</componentName>
         </componentInstances>
-        <name>Facet-ce6e9194-d2e8-4a6a-88d6-90d2e2bde415</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
-            <componentName>force:detailPanel</componentName>
-        </componentInstances>
-        <name>Facet-0b4d61e5-0644-4628-a4d5-626adfb38535</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
-            <componentName>force:relatedListContainer</componentName>
-        </componentInstances>
-        <name>Facet-56cb348f-f03c-478e-b53a-fb122dcb7a4e</name>
+        <name>Facet-870289f9-f839-4bcb-ad01-b106d10acaf4</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -128,17 +201,6 @@ This is a simple component that simply lists those fields out - but helps to cla
             <componentInstanceProperties>
                 <name>title</name>
                 <value>Enhanced FieldSet Comp.</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-ce6e9194-d2e8-4a6a-88d6-90d2e2bde415</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Simple FieldSet Comp.</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
@@ -164,7 +226,29 @@ This is a simple component that simply lists those fields out - but helps to cla
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>
-                <value>Standard.Tab.relatedLists</value>
+                <value>Detail Breakup 1</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-a01d9338-d09a-4883-8206-0572335af3fc</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Detail Breakup 2</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-870289f9-f839-4bcb-ad01-b106d10acaf4</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Simple FieldSet Comp.</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
