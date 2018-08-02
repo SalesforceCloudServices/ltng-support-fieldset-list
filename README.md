@@ -24,13 +24,22 @@ There are also declarative (clicks-not-code) options aswell - such as using [Rel
 
 ![Screenshot of RelatedRecord Components](docs/images/RelatedRecordOverview1.png)
 
-We can do this by placing standard Related Record lightning components in our App Builder page. (Within Tabs, Accordions, or other containers)
+To get started, we must first create a `Record Update` - [Quick Action](https://trailhead.salesforce.com/en/modules/salesforce1_mobile_app/units/salesforce1_mobile_app_actions_objectspecific) on the object - to define which fields we would like to include, along with the order, what is required or editable.
+
+![Screenshot of Quick Action used for Related Record](docs/images/RelatedRecordQuickAction.png)
+
+We can then place that Quick Action using the standard `Related Record` lightning components in our App Builder page. (Note that the App Builder parameter calls this the 'Update Action')
+
+These can be placed within Tabs, Accordions, or other containers to provide depth to the page.
 
 ![Screenshot of App Builder page with Related Record components](docs/images/RelatedRecordOverview2.png)
 
-Here, they show the fields from a Quick Action - specified on the App Builder page. (Such as their order, whether required or read-only)
+-----
 
-![Screenshot of Quick Action used for Related Record](docs/images/RelatedRecordQuickAction.png)
+Please note, it is possible to even hide or show specific sections if criteria is met - but these will only be hidden or shown only after save.
+
+![Screenshot of field filtering Sections](docs/images/RelatedRecordFieldFiltering.png)
+
 
 # FieldSets
 
