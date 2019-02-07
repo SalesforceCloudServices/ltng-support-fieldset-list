@@ -1,3 +1,8 @@
 .THIS lightning-helptext.slds-form-element {
     display:inline !important;
 }
+
+.THIS .cLtng_HideIfDoesNotMatch .slds-form-element__label {
+    font-weight: 700;
+    font-size: 0.875rem;
+}
