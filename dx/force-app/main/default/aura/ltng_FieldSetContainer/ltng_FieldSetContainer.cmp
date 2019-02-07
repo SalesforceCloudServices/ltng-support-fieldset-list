@@ -61,7 +61,7 @@
             </aura:if>
             <aura:iteration items="{!v.formInfo.FieldSets}" var="fieldSetInfo">
                 <div class='{!v.columnStyles}'>
-                    <div class='slds-text-body_regular slds-p-top_medium'>{!fieldSetInfo.Label}</div>
+                    <div class='slds-text-heading_medium slds-p-top_medium'>{!fieldSetInfo.Label}</div>
                     <c:ltng_FieldSetContainerList aura:id="fieldSetContainerList"
                         fieldSearchStr="{!v.fieldSearchStr}"
                         fieldSetInfo="{!fieldSetInfo}" formStyles="{!v.formStyles}"
