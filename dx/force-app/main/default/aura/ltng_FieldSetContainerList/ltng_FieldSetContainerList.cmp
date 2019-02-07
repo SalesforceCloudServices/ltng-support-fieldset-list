@@ -23,10 +23,6 @@
     <aura:attribute name="recordId" type="String" />
     <!-- whether we are working in edit mode (true) or read only mode (false) -->
     <aura:attribute name="inEditMode" type="Boolean" default="false" description="Whether the component should be in editable state (true) or read-only (false)" />
-    <!-- style to use when laying out the form
-        @TODO: cleanup 
-    <aura:attribute name="formStyles" type="String" />
-    -->
     <!-- field to search for -->
     <aura:attribute name="fieldSearchStr" type="String" />
     <!-- private attributes -->

@@ -28,11 +28,6 @@
     <aura:attribute name="saveCountdown" type="Integer" default="0" access="private" />
     <aura:attribute name="wasSaveSuccessful" type="Boolean" default="false" access="private" />
 
-    <!-- @TODO: move to the design -->
-    <aura:attribute name="gridStyles" type="String" access="private" />
-    <aura:attribute name="columnStyles" type="String" access="private" />
-    <aura:attribute name="formStyles" type="String" access="private" />
-
     <aura:attribute name="showFieldSearch" type="Boolean" default="true" />
     <aura:attribute name="fieldSearchStr" type="String" access="private" />
 
@@ -63,7 +58,6 @@
             <aura:iteration items="{!v.formInfo.FieldSets}" var="fieldSetInfo">
                 <div class='slds-col slds-size_1-of-1'>
                     <div class='slds-text-heading_medium slds-p-top_medium'>{!fieldSetInfo.Label}</div>
-                    <!-- formStyles="{!v.formStyles}" -->
                     <c:ltng_FieldSetContainerList aura:id="fieldSetContainerList"
                         useTwoColumns="{!v.useTwoColumns}" layoutStyle="{!v.layoutStyle}"
                         fieldSearchStr="{!v.fieldSearchStr}"
