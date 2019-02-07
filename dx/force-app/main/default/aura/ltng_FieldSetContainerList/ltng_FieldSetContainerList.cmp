@@ -5,7 +5,6 @@
  */
 -->
 <aura:component
-    implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes"
     access="global"
 >
     <!-- attributes -->
