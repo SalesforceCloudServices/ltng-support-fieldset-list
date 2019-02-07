@@ -14,6 +14,7 @@
     <!-- attributes -->
     <aura:attribute name="valueToFind" type="String" />
     <aura:attribute name="searchInside" type="String" />
+    <aura:attribute name="cssStyles" type="String" default="" />
     <!-- private attributes -->
     <aura:attribute name="foundValue" type="Boolean" access="private" />
     <!-- handlers -->
@@ -22,7 +23,7 @@
     <aura:handler name="change" value="{!v.valueToFind}" action="{!c.handleNeedleHaystackChanged}" />
     <!-- events -->
     <!-- elements -->
-    <div class="{! if(v.foundValue, '','slds-hide') }">
+    <div class="{! if(v.foundValue, '','slds-hide') + ' ' + v.cssStyles }">
         {!v.body}
     </div>
 </aura:component>

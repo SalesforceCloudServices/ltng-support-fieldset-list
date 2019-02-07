@@ -59,12 +59,15 @@
             onerror="{!c.handleFormError}"
         >
             <lightning:messages />
-
-            <aura:iteration items="{!v.fieldSetInfo.Fields}" var="field">
-                <c:ltng_HideIfDoesNotMatch searchInside="{!field.Label}" valueToFind="{!v.fieldSearchStr}">
-                    <lightning:inputField aura:id="fieldSetField" fieldName="{! field.APIName }" class="slds-p-top_small slds-m-top_medium" />
-                </c:ltng_HideIfDoesNotMatch>
-            </aura:iteration>
+            <div class='slds-grid slds-wrap slds-gutters'>
+                <aura:iteration items="{!v.fieldSetInfo.Fields}" var="field">
+                    <c:ltng_HideIfDoesNotMatch searchInside="{!field.Label}" valueToFind="{!v.fieldSearchStr}"
+                        cssStyles="{!v.columnStyles}"
+                    >
+                        <lightning:inputField aura:id="fieldSetField" fieldName="{! field.APIName }" />
+                    </c:ltng_HideIfDoesNotMatch>
+                </aura:iteration>
+            </div>
         </lightning:recordEditForm>
     </aura:if>
     <aura:if isTrue="{!not(v.inEditMode)}">
@@ -73,11 +76,15 @@
             class='{!v.formStyles}'
             recordId="{!v.recordId}"
         >
-        <aura:iteration items="{! v.fieldSetInfo.Fields }" var="field">
-            <c:ltng_HideIfDoesNotMatch searchInside="{!field.Label}" valueToFind="{!v.fieldSearchStr}">
-                <lightning:outputField fieldName="{! field.APIName }" class="slds-p-top_small slds-m-top_medium" />
-            </c:ltng_HideIfDoesNotMatch>
-        </aura:iteration>
+        <div class='slds-grid slds-wrap slds-gutters'>
+            <aura:iteration items="{! v.fieldSetInfo.Fields }" var="field">
+                <c:ltng_HideIfDoesNotMatch searchInside="{!field.Label}" valueToFind="{!v.fieldSearchStr}"
+                    cssStyles="{!v.columnStyles}"
+                >
+                    <lightning:outputField fieldName="{! field.APIName }" class="" />
+                </c:ltng_HideIfDoesNotMatch>
+            </aura:iteration>
+        </div>
         </lightning:recordViewForm>
     </aura:if>
 </aura:component>
