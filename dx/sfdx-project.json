@@ -1,14 +1,17 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true,
-      "id": "0Ho6A000000004XSAQ",
-      "versionName": "Version 1.0",
-      "versionNumber": "1.0.0.NEXT"
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "0Ho6A000000004XSAQ",
+            "versionName": "Version 1.0",
+            "versionNumber": "1.0.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "42.0",
+    "packageAliases": {
+        "ltng-support-fieldset-list@1.0.0-5": "04t6A000003Ok6ZQAS"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "42.0"
 }

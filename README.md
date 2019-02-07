@@ -147,9 +147,9 @@ Please login to an available sandbox and click the link below.
 -- ex: /installPackage.apexp?p0=04t6A000002sreiQAA
 -- be sure that there are no spaces (it happens...)
 
-[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002stw5QAA](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000002stw5QAA)
+[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS)
 
-(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000002stw5QAA` <br />
+(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS` <br />
 if you are already logged in)
 
 ![Install for Admins](docs/images/installPackage.png)
