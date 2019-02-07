@@ -1,6 +1,23 @@
 ({
 	setup : function(component, helper){
         //-- initialize any values - N/A at this time.
+
+        var layoutStyle = component.get('v.layoutStyle');
+        if (layoutStyle === 'horizontal') {
+            layoutStyle = 'slds-form_horizontal';
+        } else {
+            layoutStyle = 'slds-form_stacked';
+        }
+        component.set('v.formStyles', '' + layoutStyle);
+
+		var useTwoColumns = component.get('v.useTwoColumns');
+		if( useTwoColumns ){
+			component.set('v.gridStyles', 'slds-grid slds-wrap slds-gutters');
+			component.set('v.columnStyles', 'slds-col slds-size_1-of-2');
+		} else {
+			component.set('v.gridStyles', 'slds-grid slds-grid_vertical slds-gutters');
+			component.set('v.columnStyles', 'slds-col slds-size_1-of-1');
+		}
     },
     
     /**

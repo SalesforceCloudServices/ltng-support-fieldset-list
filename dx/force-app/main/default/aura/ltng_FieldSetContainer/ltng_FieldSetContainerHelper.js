@@ -10,6 +10,7 @@
 		var sObjectName = component.get('v.sObjectName');
 		var recordId = component.get('v.recordId');
 
+		/*
 		var useTwoColumns = component.get('v.useTwoColumns');
 		if( useTwoColumns ){
 			component.set('v.gridStyles', 'slds-grid slds-wrap slds-gutters');
@@ -20,6 +21,7 @@
 			component.set('v.columnStyles', 'slds-col slds-size_1-of-1');
 			component.set('v.formStyles', 'slds-form_stacked');
 		}
+		*/
 
 		helper.determineFields(component, helper, fieldSetList, sObjectName, recordId);
 	},

@@ -8,6 +8,11 @@
     access="global"
 >
     <!-- attributes -->
+    <!-- whether to show two columns or one column -->
+    <aura:attribute name="useTwoColumns" type="Boolean" default="true" />
+    <aura:attribute name="layoutStyle" type="String" default="stacked"
+        description="Whether to show the labels alongside or above the content"
+    />
     <!-- info about the fieldset that we should show -->
     <aura:attribute name="fieldSetInfo" type="Object" />
     <!-- name of the sObject that the fieldset belongs to -->
@@ -18,11 +23,19 @@
     <aura:attribute name="recordId" type="String" />
     <!-- whether we are working in edit mode (true) or read only mode (false) -->
     <aura:attribute name="inEditMode" type="Boolean" default="false" description="Whether the component should be in editable state (true) or read-only (false)" />
-    <!-- style to use when laying out the form -->
+    <!-- style to use when laying out the form
+        @TODO: cleanup 
     <aura:attribute name="formStyles" type="String" />
+    -->
     <!-- field to search for -->
     <aura:attribute name="fieldSearchStr" type="String" />
     <!-- private attributes -->
+
+    <!-- used to show the grids -->
+    <aura:attribute name="gridStyles" type="String" access="private" />
+    <aura:attribute name="columnStyles" type="String" access="private" />
+    <aura:attribute name="formStyles" type="String" access="private" />
+
     <!-- handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
     <aura:handler event="force:refreshView" action="{!c.init}" />

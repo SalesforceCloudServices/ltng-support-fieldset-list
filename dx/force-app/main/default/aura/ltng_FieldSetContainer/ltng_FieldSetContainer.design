@@ -5,6 +5,10 @@
         <design:attribute name="useTwoColumns" label="Use Two Columns"
             description="Whether to use two columns (checked) or one column (unchecked)"
         />
+        <design:attribute name='layoutStyle' label='Layout Style'
+            description='Whether to show the labels alongside (horizontal) or above (stacked)'
+            default='stacked' dataSource="stacked,horizontal"
+        />
         <design:attribute name="showFieldSearch" label="Show Field Search?"
             description="Whether to show the FieldSearch input"
         />

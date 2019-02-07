@@ -12,6 +12,7 @@
     <!-- attributes -->
     <aura:attribute name="fieldSetApiNames" type="String" />
     <aura:attribute name="useTwoColumns" type="Boolean" default="true" />
+    <aura:attribute name="layoutStyle" type="String" default="stacked" description="Whether to show the labels alongside or above the content" />
     <!-- private attributes -->
     <!-- split list of 'fieldSetName's by commas -->
     <aura:attribute name="fieldSetList" type="String[]" access="private"/>
@@ -44,7 +45,7 @@
     <!-- events -->
     <!-- elements -->
     <div class='slds-box slds-theme_default'>
-        <div class='{!v.gridStyles}'>
+        <div class='slds-grid slds-wrap slds-gutters'>
             <aura:if isTrue="{!v.showFieldSearch}">
                 <div class='slds-col slds-size_1-of-1 slds-align_absolute-center'>
                     <div class="slds-form-element slds-lookup slds-m-bottm_medium" data-select="single">
@@ -60,11 +61,13 @@
                 </div>
             </aura:if>
             <aura:iteration items="{!v.formInfo.FieldSets}" var="fieldSetInfo">
-                <div class='{!v.columnStyles}'>
+                <div class='slds-col slds-size_1-of-1'>
                     <div class='slds-text-heading_medium slds-p-top_medium'>{!fieldSetInfo.Label}</div>
+                    <!-- formStyles="{!v.formStyles}" -->
                     <c:ltng_FieldSetContainerList aura:id="fieldSetContainerList"
+                        useTwoColumns="{!v.useTwoColumns}" layoutStyle="{!v.layoutStyle}"
                         fieldSearchStr="{!v.fieldSearchStr}"
-                        fieldSetInfo="{!fieldSetInfo}" formStyles="{!v.formStyles}"
+                        fieldSetInfo="{!fieldSetInfo}"
                         sObjectName="{!v.sObjectName}" recordId="{!v.recordId}"
                         recordTypeId="{!v.recordTypeId}" inEditMode="{!v.inEditMode}"
                     />
