@@ -5,5 +5,7 @@
 package.xml
 **.profile*
 
+**/OrgPreference.settings*
 **/Security.settings*
 **/Address.settings*
+
