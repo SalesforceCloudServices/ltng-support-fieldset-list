@@ -34,6 +34,10 @@ This supports lists of FieldSets (instead of just one at a time - like from the 
                 <value>BillingInfo,ShippingInfo</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>layoutStyle</name>
+                <value>horizontal</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>showFieldSearch</name>
                 <value>true</value>
             </componentInstanceProperties>
@@ -49,12 +53,16 @@ This supports lists of FieldSets (instead of just one at a time - like from the 
                 <value>ExampleInfo,RequiredInfo</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>layoutStyle</name>
+                <value>stacked</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>showFieldSearch</name>
                 <value>true</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>useTwoColumns</name>
-                <value>true</value>
+                <value>false</value>
             </componentInstanceProperties>
             <componentName>ltng_FieldSetContainer</componentName>
         </componentInstances>
