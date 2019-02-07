@@ -180,16 +180,23 @@
 	 *  <p>In response to the activateSave request made to those components earlier</p>
 	 */
     handleSaveAction : function(component, event, helper){
-        if( helper.decrementCounter(component, helper) ){
+				
+				// helper.decrementCounter(component, helper);
+				//-- @UPDATE: we will only receive one save success response
+				//-- not multiple (because of boxcar-ing the requests)
+				//-- so mark the save as completed.
+				component.set('v.saveCountdown', 0);
+				
+				// if (allSaveResponsesCaptured) {
             //console.info('all components have submitted save (successful or not) - so we are doe waiting');
-			var wasSaveSuccessful = component.get('v.wasSaveSuccessful');
+						var wasSaveSuccessful = component.get('v.wasSaveSuccessful');
             if( wasSaveSuccessful ){
                 //console.info('all forms validated and saved successfully, so we will convert back to read only mode.');
-				helper.setEditMode(component, helper, false);
+								helper.setEditMode(component, helper, false);
             } else {
                 console.error('one of the forms failed validation, but i am done waiting');
             }
-        }
+        // }
     },
 
 	/**
