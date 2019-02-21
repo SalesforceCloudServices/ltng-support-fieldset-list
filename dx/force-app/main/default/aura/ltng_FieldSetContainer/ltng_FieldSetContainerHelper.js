@@ -124,7 +124,7 @@
 
 		var fieldSetContainers = component.find('fieldSetContainerList');
 		helper.resetCounter(component, helper, fieldSetContainers.length);
-		fieldSetContainers.forEach(function(fieldSetContainer){
+        helper.safeForEach(fieldSetContainers, function(fieldSetContainer){
 			fieldSetContainer.initiateSave(component, helper);
 			//-- assume we will get a VALIDATE (success or fail)
 		});
@@ -139,7 +139,7 @@
 		//-- @invariant - all forms should be validated by this point.
 		var fieldSetContainers = component.find('fieldSetContainerList');
 		helper.resetCounter(component, helper, fieldSetContainers.length);
-		fieldSetContainers.forEach(function(fieldSetContainer){
+        helper.safeForEach(fieldSetContainers, function(fieldSetContainer){
 			fieldSetContainer.activateSave(component, helper);
 			//-- assume we will get a SAVE (success or fail)
 		});
@@ -167,23 +167,21 @@
 	 *  <p>In response to the activateSave request made to those components earlier</p>
 	 */
     handleSaveAction : function(component, event, helper){
+        // helper.decrementCounter(component, helper);
+        //-- @UPDATE: we will only receive one save success response
+        //-- not multiple (because of boxcar-ing the requests)
+        //-- so mark the save as completed.
+        component.set('v.saveCountdown', 0);
 				
-				// helper.decrementCounter(component, helper);
-				//-- @UPDATE: we will only receive one save success response
-				//-- not multiple (because of boxcar-ing the requests)
-				//-- so mark the save as completed.
-				component.set('v.saveCountdown', 0);
-				
-				// if (allSaveResponsesCaptured) {
-            //console.info('all components have submitted save (successful or not) - so we are doe waiting');
-						var wasSaveSuccessful = component.get('v.wasSaveSuccessful');
-            if( wasSaveSuccessful ){
-                //console.info('all forms validated and saved successfully, so we will convert back to read only mode.');
-								helper.setEditMode(component, helper, false);
-            } else {
-                console.error('one of the forms failed validation, but i am done waiting');
-            }
-        // }
+        // if (allSaveResponsesCaptured) {
+        // console.info('all components have submitted save (successful or not) - so we are doe waiting');
+        var wasSaveSuccessful = component.get('v.wasSaveSuccessful');
+        if( wasSaveSuccessful ){
+        	// console.info('all forms validated and saved successfully, so we will convert back to read only mode.');
+        	helper.setEditMode(component, helper, false);
+        } else {
+        	console.error('one of the forms failed validation, but i am done waiting');
+        }
     },
 
 	/**
@@ -223,5 +221,32 @@
 		component.set('v.saveCountdown', saveCountdown);
 
 		return( saveCountdown <= 0);
-	}
+	},
+    
+    /**
+     * Safe For-Each method. (Note that component.find() now returns
+     * a single component or a list of components, making forEach no longer safe
+     * because there is no forEach on a single component.
+     * 
+     * This is meant to be a direct replacement from
+     * component.find('formItem').forEach(function(targetInput){ ... })
+     * to
+     * helper.safeForEach(component.find('formItem'), function(targetInput){ ... });
+     * 
+     * @param collection (component|component[]) - single component or multiple components
+     * @param iterationFunction (function) - the function to call
+     **/
+    safeForEach : function(componentCollection, iterationFunction) {
+        if (!componentCollection) {
+            //-- no items
+            return;
+        } else if ((typeof componentCollection.forEach) != 'undefined') {
+            //-- we have a list of components
+            componentCollection.forEach(iterationFunction);
+        } else {
+            //-- single component
+            var singleComponent = componentCollection;
+            iterationFunction.call(this, singleComponent);
+        }
+    }
 })
