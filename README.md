@@ -143,13 +143,9 @@ This works very similar to an App Exchange install.
 
 Please login to an available sandbox and click the link below.
 
-@CHANGE: update the link to the installation id (starts with 04t...)
--- ex: /installPackage.apexp?p0=04t6A000002sreiQAA
--- be sure that there are no spaces (it happens...)
+[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Sw3TQAS](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Sw3TQAS)
 
-[https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS)
-
-(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000003Ok6ZQAS` <br />
+(or simply navigate to `https://YOUR_SALESFORCE_INSTANCE/packaging/installPackage.apexp?p0=04t6A000003Sw3TQAS` <br />
 if you are already logged in)
 
 ![Install for Admins](docs/images/installPackage.png)
