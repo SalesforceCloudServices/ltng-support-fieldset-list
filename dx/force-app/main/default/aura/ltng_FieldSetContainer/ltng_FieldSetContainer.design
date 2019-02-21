@@ -1,4 +1,4 @@
-<design:component>
+<design:component label="FieldSet Container">
         <design:attribute name="fieldSetApiNames" label="List of FieldSet API Names"
             description="Comma Separated list of fieldsets (by API Name) to use"
         />
