@@ -13,6 +13,7 @@
     "sourceApiVersion": "42.0",
     "packageAliases": {
         "ltng-support-fieldset-list@1.0.0-5": "04t6A000003Ok6ZQAS",
-        "ltng-support-fieldset-list@1.0.0-6": "04t6A000003Sw3TQAS"
+        "ltng-support-fieldset-list@1.0.0-6": "04t6A000003Sw3TQAS",
+        "ltng-support-fieldset-list@1.0.0-7": "04t6A000003Sw3YQAS"
     }
 }
