@@ -30,6 +30,8 @@
 
     <aura:attribute name="showFieldSearch" type="Boolean" default="true" />
     <aura:attribute name="fieldSearchStr" type="String" access="private" />
+    
+    <aura:attribute name="showSpinner" type="Boolean" default="false" access="private" />
 
     <!-- handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
@@ -39,7 +41,16 @@
     />
     <!-- events -->
     <!-- elements -->
-    <div class='slds-box slds-theme_default'>
+    <div class='slds-box slds-theme_default slds-is-relative'>
+        <aura:if isTrue='{!v.showSpinner}'>
+        	<div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </aura:if>
         <div class='slds-grid slds-wrap slds-gutters'>
             <aura:if isTrue="{!v.showFieldSearch}">
                 <div class='slds-col slds-size_1-of-1 slds-align_absolute-center'>

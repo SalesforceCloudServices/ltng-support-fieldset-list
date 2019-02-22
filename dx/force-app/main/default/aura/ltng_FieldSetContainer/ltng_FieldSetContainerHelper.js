@@ -9,9 +9,19 @@
 
 		var sObjectName = component.get('v.sObjectName');
 		var recordId = component.get('v.recordId');
+        
+        helper.setSpinnerShown(component, helper, false);
 
 		helper.determineFields(component, helper, fieldSetList, sObjectName, recordId);
 	},
+    
+    /**
+     * Whether to show the spinner (true) or not (false)
+     * @param shouldShow (boolean)
+     **/
+    setSpinnerShown : function(component, helper, shouldShow) {
+        component.set('v.showSpinner', shouldShow);
+    },
 
 	/**
 	 * Splits a comma separated list of fieldset names by commas
@@ -143,6 +153,9 @@
 			fieldSetContainer.activateSave(component, helper);
 			//-- assume we will get a SAVE (success or fail)
 		});
+        
+        //-- turn on the spinner
+        helper.setSpinnerShown(component, helper, true);
 	},
 
 	/**
@@ -173,6 +186,9 @@
         //-- so mark the save as completed.
         component.set('v.saveCountdown', 0);
 				
+        //-- turn off the spinner
+        helper.setSpinnerShown(component, helper, false);
+		
         // if (allSaveResponsesCaptured) {
         // console.info('all components have submitted save (successful or not) - so we are doe waiting');
         var wasSaveSuccessful = component.get('v.wasSaveSuccessful');
